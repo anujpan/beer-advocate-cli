@@ -9,7 +9,7 @@ class Scraper
       url = "https://www.beeradvocate.com" + value.css('td')[1].css('a').attribute("href").value
 
       Beer.new(name, brewery, url)
-    end    
+    end
   end
 
   def self.scrape_beer(beer_obj)
