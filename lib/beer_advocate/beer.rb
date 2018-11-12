@@ -1,11 +1,12 @@
 class Beer
-  attr_accessor :name, :brewery
+  attr_accessor :name, :brewery, :url
 
   @@all = []
 
-  def initialize(name, brewery)
+  def initialize(name, brewery, url)
     @name = name
     @brewery = brewery
+    @url = url
 
     @@all.push(self)
   end

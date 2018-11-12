@@ -27,6 +27,10 @@ class CLI
         show_list(250)
         puts "\nSelect the placement number of any brew to see more info about it or exit by saying 'q'"
       elsif @input.to_i.between?(1, 250)
+        # puts Beer.all[@input.to_i].name
+        # scrape new beer
+        Scraper.scrape_beer(Beer.all[@input.to_i])
+
         puts "\nSelect another placement number to see more info about it or say 'full' to see the full list again.\nFeel free to exit at any time by saying in 'q'"
       else
         puts "\nInvalid response, please try again.\nTo see the full list type 'full', or exit by saying 'q'"
