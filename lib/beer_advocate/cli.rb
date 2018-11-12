@@ -17,16 +17,16 @@ class CLI
   end
 
   def options
-    @input = gets.chomp
+    input = gets.chomp
 
-    if @input == "q"
+    if input == "q"
       puts "\n\n\n\n\nGo drink a beer\n\n\n\n\n"
     else
-      if @input == "full"
+      if input == "full"
         show_list(250)
         puts "\nSelect the placement number of any brew to see more info about it or exit by saying 'q'"
-      elsif @input.to_i.between?(1, 250)
-        selection = Beer.all[@input.to_i - 1]
+      elsif input.to_i.between?(1, 250)
+        selection = Beer.all[input.to_i - 1]
         Scraper.scrape_beer(selection)
 
         puts "\n#{selection.name} is brewed in #{selection.location} by #{selection.brewery} and is in the style of a(n) #{selection.style}.\nIt has a rating of #{selection.rating} that is based on #{selection.ratings} votes by beer advocate users.\nIf you are looking to get one #{selection.gots} people have them and #{selection.wants} are in the same boat as you"
