@@ -1,6 +1,4 @@
 class Scraper
-  BA_URL = "https://www.beeradvocate.com"
-
   def self.scrape_list
     html = Nokogiri::HTML(open("https://www.beeradvocate.com/lists/top/"))
     html.css('#ba-content table tr').each_with_index do |value, i|
