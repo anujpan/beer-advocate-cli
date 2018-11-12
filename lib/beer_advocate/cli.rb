@@ -10,7 +10,6 @@ class CLI
   end
 
   def show_list(amount)
-    # stop each at amount if its designated
     Beer.all.each.with_index(1) do |beer, i|
       puts "#{i}. #{beer.name} by #{beer.brewery}"
       break if i == amount
