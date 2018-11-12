@@ -4,7 +4,7 @@ class CLI
 
     show_list(25)
     
-    puts "\nHello!\nPresented is a list of Beer Advocates Top 250 beers of all time.\nSelect the placement number of any brew to see more info about it.\nFeel free to exit at any time by saying in 'q'"
+    puts "\nHello!\nPresented is a list of Beer Advocates Top 250 beers of all time but for sanities sake I am only showing the first 25.\nSelect the placement number of any brew to see more info about it or say 'full' to see the whole list.\nFeel free to exit at any time by saying in 'q'"
 
     options
   end
