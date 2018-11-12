@@ -29,7 +29,7 @@ class CLI
         selection = Beer.all[input.to_i - 1]
         Scraper.scrape_beer(selection)
 
-        puts "\n#{selection.name} is brewed in #{selection.location} by #{selection.brewery} and is in the style of a(n) #{selection.style}.\nIt has a rating of #{selection.rating} that is based on #{selection.ratings} votes by beer advocate users.\nIf you are looking to get one #{selection.gots} people have them and #{selection.wants} are in the same boat as you"
+        puts "\n#{selection.name} is brewed in #{selection.location} by #{selection.brewery} and is in the style of a(n) #{selection.style}.\nIt has a rating of #{selection.rating}/5 that is based on #{selection.ratings} votes by beer advocate users.\nIf you are looking to get one #{selection.gots} people have them and #{selection.wants} are in the same boat as you"
 
         puts "\nSelect another placement number to see more info about it or say 'full' to see the full list again.\nFeel free to exit at any time by saying in 'q'"
       else
