@@ -14,4 +14,10 @@ class Beer
   def self.all
     @@all
   end
+
+  def set_additional_attrs(values)
+    values.each do |key, value|
+      self.send "#{key}=", value
+    end
+  end
 end

@@ -15,11 +15,15 @@ class Scraper
   def self.scrape_beer(beer_obj)
     html = Nokogiri::HTML(open(beer_obj.url))
 
-    beer_obj.rating = html.css('.ba-ravg').text
-    beer_obj.location = html.css('#info_box > a')[1].text
-    beer_obj.style = html.css('.secondaryContent b > a').text
-    beer_obj.ratings = html.css('#score_box .ba-ratings').text
-    beer_obj.wants = html.css('.ba-wants').text
-    beer_obj.gots = html.css('.ba-gots').text
+    hash = {
+      rating: html.css('.ba-ravg').text,
+      location: html.css('#info_box > a')[1].text,
+      style: html.css('.secondaryContent b > a').text,
+      ratings: html.css('#score_box .ba-ratings').text,
+      wants: html.css('.ba-wants').text,
+      gots: html.css('.ba-gots').text
+    }
+
+    beer_obj.set_additional_attrs(hash)
   end
 end
