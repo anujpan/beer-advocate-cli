@@ -1,20 +1,18 @@
 # BeerAdvocate
 
-This gem allows you to view the Beer Advocate Top 250 beers of all time and get a snipit of each brew on command. Put your Ruby code in the file `lib/beer_advocate`
-
-## Installation
-
-To install, clone repo and run `bin/setup` to install dependencies
-
-To start the program, run `bin/beer-advocate-cli`
+This gem allows you to view the Beer Advocate Top 250 beers of all time and get a snipit of each brew on command
 
 ## Usage
 
 View more information on beers that are most likely impossible to find
 
-## Development
+## Installation and Development
 
-After checking out the repo, run `bin/setup` to install dependencies.
+To install, clone repo and run `bin/setup` to install dependencies
+
+To start the program, run `bin/beer-advocate-cli`
+
+All Ruby code should be added into the file `lib/beer_advocate`
 
 ## Contributing
 
