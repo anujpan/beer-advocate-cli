@@ -8,9 +8,9 @@ View more information on beers that are most likely impossible to find
 
 ## Installation and Development
 
-To install, clone repo and run `bin/setup` to install dependencies
+To install, clone repo and navigate into the base project folder. 
 
-To start the program, run `bin/beer-advocate-cli`
+Run `bin/setup` to install dependencies and to start the program, run `bin/beer-advocate-cli`
 
 All Ruby code should be added into the file `lib/beer_advocate`
 
